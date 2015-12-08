@@ -12,4 +12,4 @@ RUN apt-get update && \
 COPY . /usr/src/app/
 
 RUN javac /usr/src/app/src/main/java/com/GevaRaspResin.java
-CMD /usr/src/app/run.sh
+CMD ["/bin/bash", "/usr/src/app/run.sh"]

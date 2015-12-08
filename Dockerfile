@@ -9,7 +9,7 @@ RUN apt-get update && \
     apt-get -y install oracle-java8-jdk && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
-COPY . /usr/src/app/com
+COPY . /usr/src/app/src/main/java/com
 
-RUN javac /usr/src/app/com/GevaRaspResin.java
+RUN javac /usr/src/app/src/main/java/com/GevaRaspResin.java
 CMD run.sh

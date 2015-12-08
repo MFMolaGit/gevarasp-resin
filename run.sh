@@ -1,8 +1,7 @@
 #!/bin/bash
-dir
 
-echo "Antes de acceder a ruta"
-cd /usr/src/app/
-dir
+echo "Init run"
+cd /usr/src/app/src/main/java/com
+echo "In /usr/src/app/src/main/java/com path"
 echo "Ejecutando GevaRaspResin app"
-java -cp . /usr/src/app/src/main/java/GevaRaspResin
+java -cp . GevaRaspResin.java

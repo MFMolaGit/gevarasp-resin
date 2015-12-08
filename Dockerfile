@@ -11,5 +11,5 @@ RUN apt-get update && \
 
 COPY . /usr/src/app
 
-RUN javac /usr/src/app/com/gevarasp/main/GevaRaspResin.java
-CMD /usr/src/app/run.sh
+RUN javac /usr/src/app/GevaRaspResin.java
+CMD run.sh

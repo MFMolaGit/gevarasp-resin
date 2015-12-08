@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cd /usr/src/app/com/gevarasp/main
+cd /usr/src/app
 java -cp . GevaRaspResin

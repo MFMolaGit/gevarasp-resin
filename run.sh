@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cd /usr/src/app/src/main/java/com
-java -cp . GevaRaspResin
+cd /usr/src/app/
+java -cp . src/main/java/GevaRaspResin

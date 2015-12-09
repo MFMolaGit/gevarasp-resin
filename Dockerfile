@@ -8,10 +8,11 @@ RUN echo 'deb http://archive.raspberrypi.org/debian/ wheezy main' >> /etc/apt/so
 RUN apt-get update && \
     apt-get -y install oracle-java8-jdk && \
     apt-get clean && rm -rf /var/lib/apt/lists/* && \
-    apt-get install pi4j
+    apt-get install maven
 
 COPY . /usr/src/app/
 
-RUN javac -classpath .:classes:/opt/pi4j/lib/'*' /usr/src/app/src/main/java/com/GevaRaspResin.java
+echo 'javac -classpath .:classes:/opt/pi4j/lib/'*' /usr/src/app/src/main/java/com/GevaRaspResin.java'
+RUN mvn compile package
 
 CMD ["/bin/bash", "/usr/src/app/run.sh"]

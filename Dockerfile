@@ -8,7 +8,7 @@ RUN echo 'deb http://archive.raspberrypi.org/debian/ wheezy main' >> /etc/apt/so
 RUN apt-get update && \
     apt-get -y install oracle-java8-jdk && \
     apt-get clean && rm -rf /var/lib/apt/lists/* && \
-    curl -s get.pi4j.com | sudo bash
+    apt-get install pi4j
 
 COPY . /usr/src/app/
 

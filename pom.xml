@@ -4,7 +4,7 @@
   <artifactId>gevarasp-resin</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
-  <name>Testing Pi4J and Maven</name>
+  <name>Geva Raspberri Resin Pi4J and Maven</name>
   <url>http://maven.apache.org</url>
     
     <properties>

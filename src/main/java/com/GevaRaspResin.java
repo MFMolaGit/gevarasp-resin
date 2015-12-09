@@ -15,7 +15,7 @@ public class GevaRaspResin {
 		 final GpioController gpio = GpioFactory.getInstance();
 
 		 // provisionar pin #01 como output y encenderlo como estado inicial
-		 final GpioPinDigitalOutput pin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_04, "MyLED", PinState.HIGH);
+		 final GpioPinDigitalOutput pin = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_05, "MyLED", PinState.HIGH);
 		 System.out.println("--> GPIO state: ON");
 
 		 Thread.sleep(5000);

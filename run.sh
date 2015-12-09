@@ -6,4 +6,4 @@ echo "----------------------------"
 echo "In /usr/src/app/src/main/java path"
 echo "----------------------------"
 echo "Ejecutando GevaRaspResin app"
-java -cp  -classpath .;lib/* com.GevaRaspResin
+java -cp -classpath .:classes:/opt/pi4j/lib/'*' com.GevaRaspResin

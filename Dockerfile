@@ -7,9 +7,11 @@ RUN echo 'deb http://archive.raspberrypi.org/debian/ wheezy main' >> /etc/apt/so
 
 RUN apt-get update && \
     apt-get -y install oracle-java8-jdk && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
+    apt-get clean && rm -rf /var/lib/apt/lists/* && \
+    curl -s get.pi4j.com | sudo bash
 
 COPY . /usr/src/app/
 
-RUN mvn clean install
+RUN javac -classpath .:classes:/opt/pi4j/lib/'*' /usr/src/app/src/main/java/com/GevaRaspResin.java
+
 CMD ["/bin/bash", "/usr/src/app/run.sh"]
